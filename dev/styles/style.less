@@ -2,6 +2,12 @@
 @import (inline) "main.css";
 
 // =====================
+// vars
+// =====================
+
+@pt-sans: "PT Sans";
+
+// =====================
 // resets, overridings
 // =====================
 
@@ -27,10 +33,82 @@ html {
 // =====================
 
 body {
-	
+	font-family: 'PT Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.layout-center {
+	width: 980px;
+	margin: auto;
 }
 
 // =====================
 // block specific
 // =====================
 
+header.page {
+	.top-line {
+		background: #3A424A;
+		color: #fff;
+		font-size: 0;
+
+		span,
+		a {
+			font: 400 15px / 40px @pt-sans;
+		}
+
+		.phone, 
+		.mail,
+		.right-block {
+			display: inline-block;
+		}
+
+		.phone {
+			span:before {
+				content: '';
+				display: inline-block;
+				width: 11px;
+				height: 11px;
+				margin-right: 5px;
+				background: url(../img/icon-phone.svg) 50% 50%;
+			}
+		}
+
+		.mail {
+			margin-left: 18px;
+
+			a:before {
+				content: '';
+				display: inline-block;
+				width: 10px;
+				height: 8px;
+				margin-right: 5px;
+				background: url(../img/icon-mail.svg) 50% 50%;
+			}
+
+			a {
+				color: #fff;
+			}
+
+
+		}
+
+		.right-block {
+			float: right;
+
+			.lang {
+				span:after {
+					content: '';
+					display: inline-block;
+					width: 7px;
+					height: 5px;
+					margin-left: 4px;
+					background: url(../img/icon-arrow-down.svg) 50% 50%;
+				}
+			}
+		}
+	}
+}

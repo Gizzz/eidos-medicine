@@ -725,3 +725,60 @@ html {
 *:after {
   box-sizing: inherit;
 }
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.layout-center {
+  width: 980px;
+  margin: auto;
+}
+header.page .top-line {
+  background: #3A424A;
+  color: #fff;
+  font-size: 0;
+}
+header.page .top-line span,
+header.page .top-line a {
+  font: 400 15px / 40px "PT Sans";
+}
+header.page .top-line .phone,
+header.page .top-line .mail,
+header.page .top-line .right-block {
+  display: inline-block;
+}
+header.page .top-line .phone span:before {
+  content: '';
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-right: 5px;
+  background: url(../img/icon-phone.svg) 50% 50%;
+}
+header.page .top-line .mail {
+  margin-left: 18px;
+}
+header.page .top-line .mail a:before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 8px;
+  margin-right: 5px;
+  background: url(../img/icon-mail.svg) 50% 50%;
+}
+header.page .top-line .mail a {
+  color: #fff;
+}
+header.page .top-line .right-block {
+  float: right;
+}
+header.page .top-line .right-block .lang span:after {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 5px;
+  margin-left: 4px;
+  background: url(../img/icon-arrow-down.svg) 50% 50%;
+}
