@@ -21,12 +21,13 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            dev: {
+            // task: {
                 less: {
                     files: ['dev/styles/*.less'],
                     tasks: ['less']
                 },
-            }
+                // ,
+            // }
         },
         browserSync: {
             bsFiles: {
@@ -38,7 +39,7 @@ module.exports = function(grunt) {
                 watchTask: true,
                 server: {
                     baseDir: "./dev/"
-                }
+                },
             }
         },
         clean: {
