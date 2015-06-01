@@ -821,8 +821,8 @@ header.page .menu .nav li {
   display: inline-block;
 }
 header.page .menu .nav li a {
-  color: #373737;
-  font: 700 18px / 1 "PT Sans";
+  color: #000;
+  font: 400 18px / 1 "PT Sans";
 }
 header.page .menu .nav li:not(:last-child) a {
   margin-right: 20px;
