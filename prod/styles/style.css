@@ -735,6 +735,9 @@ a {
   width: 980px;
   margin: auto;
 }
+.layout-inner {
+  margin: 0 10px;
+}
 header.page .top-line {
   background: #3A424A;
   color: #fff;
@@ -774,6 +777,21 @@ header.page .top-line .mail a {
 header.page .top-line .right-block {
   float: right;
 }
+header.page .top-line .right-block .search,
+header.page .top-line .right-block .lang {
+  display: inline-block;
+}
+header.page .top-line .right-block .search i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 18px;
+  background: url(../img/icon-search.svg) 50% 50%;
+  cursor: pointer;
+}
+header.page .top-line .right-block .lang {
+  cursor: pointer;
+}
 header.page .top-line .right-block .lang span:after {
   content: '';
   display: inline-block;
@@ -781,4 +799,43 @@ header.page .top-line .right-block .lang span:after {
   height: 5px;
   margin-left: 4px;
   background: url(../img/icon-arrow-down.svg) 50% 50%;
+}
+header.page .menu {
+  height: 98px;
+}
+header.page .menu .logo {
+  position: relative;
+  top: 42px;
+  display: inline-block;
+  width: 340px;
+  height: 33px;
+  background: url(../img/logo-header.svg) 50% 50%;
+}
+header.page .menu .nav {
+  position: relative;
+  top: 53px;
+  float: right;
+  font-size: 0;
+}
+header.page .menu .nav li {
+  display: inline-block;
+}
+header.page .menu .nav li a {
+  color: #000;
+  font: 400 18px / 1 "PT Sans";
+}
+header.page .menu .nav li:not(:last-child) a {
+  margin-right: 20px;
+}
+section.slider .slide {
+  position: relative;
+  width: 100%;
+  height: 430px;
+}
+section.slider .slide img {
+  position: absolute;
+  min-width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }

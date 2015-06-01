@@ -45,6 +45,10 @@ a {
 	margin: auto;
 }
 
+.layout-inner {
+	margin: 0 10px;
+}
+
 // =====================
 // block specific
 // =====================
@@ -99,7 +103,25 @@ header.page {
 		.right-block {
 			float: right;
 
+			.search, 
 			.lang {
+				display: inline-block;
+			}
+
+			.search {
+				i {
+					display: inline-block;
+					width: 10px;
+					height: 10px;
+					margin-right: 18px;
+					background: url(../img/icon-search.svg) 50% 50%;
+					cursor: pointer;
+				}
+			}
+
+			.lang {
+				cursor: pointer;
+
 				span:after {
 					content: '';
 					display: inline-block;
@@ -109,6 +131,55 @@ header.page {
 					background: url(../img/icon-arrow-down.svg) 50% 50%;
 				}
 			}
+		}
+	}
+
+	.menu {
+		height: 98px;
+
+		.logo {
+			position: relative;
+			top: 42px;
+			display: inline-block;
+			width: 340px;
+			height: 33px;
+			background: url(../img/logo-header.svg) 50% 50%;
+		}
+
+		.nav {
+			position: relative;
+			top: 53px;
+			float: right;
+			font-size: 0;
+
+			li {
+				display: inline-block;
+
+				a {
+					color: #000;
+					font: 400 18px / 1 @pt-sans;
+				}
+
+				&:not(:last-child) a {
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+
+section.slider {
+	.slide {
+		position: relative;
+		width: 100%;
+		height: 430px;
+		
+		img {
+			position: absolute;
+			min-width: 100%;
+			height: 100%;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 	}
 }
