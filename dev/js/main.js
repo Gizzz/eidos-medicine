@@ -3,16 +3,16 @@
 "use strict";
 
 $(function () {
-	// var $slider = $(".slider-slides .container");
+	var $slider = $(".slider");
 	
-	// $slider.cycle({
-	// 	slides: ".slide",
-	// 	timeout: 4000,
-	// 	speed: 400,
-	// 	fx: "tileSlide",
-	// 	tileCount: 10,
-	// 	// pauseOnHover: true,
-	// });
+	$slider.cycle({
+		slides: ".slide",
+		timeout: 2000,
+		speed: 400,
+		fx: "scrollHorz",
+		// tileCount: 10,
+		// pauseOnHover: true,
+	});
 
 	// $slider.on('cycle-update-view', function (event, opts) {
 	// 	$(".slider-thumbnails .item").removeClass("active");

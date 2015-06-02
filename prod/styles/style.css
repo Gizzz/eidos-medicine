@@ -830,6 +830,28 @@ header.page .menu .nav li a {
 header.page .menu .nav li:not(:last-child) a {
   margin-right: 20px;
 }
+section.slider .cycle-prev,
+section.slider .cycle-next {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  opacity: 0;
+  z-index: 800;
+  height: 100%;
+  cursor: pointer;
+}
+section.slider .cycle-prev:hover,
+section.slider .cycle-next:hover {
+  opacity: .7;
+}
+section.slider .cycle-prev {
+  left: 0;
+  background: url(../img/slider-left.png) 50% 50% no-repeat;
+}
+section.slider .cycle-next {
+  right: 0;
+  background: url(../img/slider-right.png) 50% 50% no-repeat;
+}
 section.slider .slide {
   position: relative;
   width: 100%;
@@ -897,6 +919,7 @@ section.news .list .item {
   padding: 10px;
   background: #fff;
   box-shadow: 0 3px 4px rgba(1, 38, 76, 0.12);
+  cursor: pointer;
 }
 section.news .list .item:not(:last-child) {
   margin-right: 20px;
