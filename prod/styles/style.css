@@ -918,11 +918,15 @@ section.news .list .item {
   overflow: hidden;
   padding: 10px;
   background: #fff;
-  box-shadow: 0 3px 4px rgba(1, 38, 76, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.02);
   cursor: pointer;
+  transition: all .25s;
 }
 section.news .list .item:not(:last-child) {
   margin-right: 20px;
+}
+section.news .list .item:hover {
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.12);
 }
 section.news .list .item img {
   width: 210px;
@@ -960,8 +964,11 @@ section.news .show-all {
   padding: 12px 0;
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  background: #fff;
   color: #3B3B3B;
   font: 400 18px / 1 "PT Sans";
   text-align: center;
+  transition: all .25s;
+}
+section.news .show-all:hover {
+  background: #fff;
 }

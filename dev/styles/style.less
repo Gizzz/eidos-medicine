@@ -287,11 +287,16 @@ section.news {
 			overflow: hidden;
 			padding: 10px;
 			background: #fff;
-			box-shadow: 0 3px 4px rgba(1, 38, 76, 0.12);
+			border: 1px solid rgba(0, 0, 0, 0.02);
 			cursor: pointer;
+			transition: all .25s;
 
 			&:not(:last-child) {
 				margin-right: 20px;
+			}
+
+			&:hover {
+				box-shadow: 0 3px 16px rgba(0, 0, 0, 0.12);
 			}
 
 			img {
@@ -339,9 +344,13 @@ section.news {
 		padding: 12px 0;
 		border: 2px solid rgba(0, 0, 0, 0.1);
 		border-radius: 4px;
-		background: #fff;
 		color: #3B3B3B;
 		font: 400 18px / 1 @pt-sans;
 		text-align: center;
+		transition: all .25s;
+
+		&:hover {
+			background: #fff;
+		}
 	}
 }
