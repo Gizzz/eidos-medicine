@@ -40,6 +40,8 @@ module.exports = function(grunt) {
                 server: {
                     baseDir: "./dev/"
                 },
+                // enables external access
+                online: true,
             }
         },
         clean: {
