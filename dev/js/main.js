@@ -7,10 +7,9 @@ $(function () {
 	
 	$slider.cycle({
 		slides: ".slide",
-		timeout: 2000,
+		timeout: 4000,
 		speed: 400,
 		fx: "scrollHorz",
-		// tileCount: 10,
 		// pauseOnHover: true,
 	});
 
