@@ -53,6 +53,14 @@ a {
 	margin: 0 10px;
 }
 
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
 // =====================
 // block specific
 // =====================
@@ -81,7 +89,7 @@ header.page {
 				width: 11px;
 				height: 11px;
 				margin-right: 5px;
-				background: url(../img/icon-phone.svg) 50% 50%;
+				background: url(../img/icon-phone-white.svg) 50% 50%;
 			}
 		}
 
@@ -94,14 +102,16 @@ header.page {
 				width: 10px;
 				height: 8px;
 				margin-right: 5px;
-				background: url(../img/icon-mail.svg) 50% 50%;
+				background: url(../img/icon-mail-white.svg) 50% 50%;
 			}
 
 			a {
 				color: #fff;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
-
-
 		}
 
 		.right-block {
@@ -161,7 +171,7 @@ header.page {
 
 				a {
 					color: #000;
-					font: 400 18px / 1 @pt-sans;
+					font: 700 18px / 1 @pt-sans;
 				}
 
 				&:not(:last-child) a {
@@ -190,12 +200,12 @@ section.slider {
 
 	.cycle-prev {
 		left: 0;
-		background: url(../img/slider-left.png) 50% 50% no-repeat;
+		// background: url(../img/slider-left.png) 50% 50% no-repeat;
 	}
 
 	.cycle-next {
 	    right: 0;
-	    background: url(../img/slider-right.png) 50% 50% no-repeat;
+	    // background: url(../img/slider-right.png) 50% 50% no-repeat;
 	}
 
 	.slide {
@@ -207,6 +217,7 @@ section.slider {
 		.text {
 			position: absolute;
 			bottom: 40px;
+			cursor: pointer;
 
 			span {
 				display: inline-block;
@@ -231,45 +242,57 @@ section.slider {
 }
 
 section.about,
+section.mission,
 section.news {
+	padding: 50px 0;
+
 	h1 {
-		padding-top: 50px;
-		padding-bottom: 31px;
+		padding-bottom: 32px;
 		font: 700 43px / 1 @pt-sans;
 		color: @blue;
 	}
 }
 
-section.about {
-	padding-bottom: 100px;
-
-	.col-1, 
-	.col-2 {
-		float: left;
-		width: 455px;
+section.about,
+section.mission {
+	.col {
+		width: 460px;
 
 		p {
-			text-align: justify;
-
 			&:not(:last-child) {
-				margin-bottom: 20px;
+				margin-bottom: 10px;
 			}
 		}
 	}
+}
 
-	.col-1 {
-		margin-right: 50px;
+section.about,
+section.news {
+	background-color: #FAFAFA;
+}
+
+section.about {
+	.layout-center {
+		background-image: url(../img/section-about.png);
+		background-position: 100% 58px;
+		background-repeat: no-repeat;
+	}
+}
+
+section.mission {
+	.layout-inner {
+		background-image: url(../img/section-mission.jpg);
+		background-position: 0 5px;
+		background-repeat: no-repeat;
 	}
 }
 
 section.news {
-	background: #FAFAFA;
-	padding-bottom: 50px;
-
 	.list {
 		.item {
 			float: left;
 			width: 230px;
+			height: 382px;
 			overflow: hidden;
 			padding: 10px;
 			background: #fff;
@@ -291,10 +314,10 @@ section.news {
 			}
 
 			h2 {
-				// height: 2 lines + padding-top
-				height: 46px;
+				// max-height: 3 lines
+				max-height: 48px;
 				overflow: hidden;
-				padding-top: 6px;
+				margin-top: 6px;
 				font: 700 15px / 18px @pt-sans;
 			}
 
@@ -309,15 +332,15 @@ section.news {
 
 			time {
 				display: block;
-				margin-top: 2px;
+				margin-top: 10px;
 				font: 400 12px / 1 @pt-sans;
 				color: #808080;
 			}
 
 			p {
 				// height: 5 lines
-				height: 78px;
-				overflow: hidden;
+				// height: 78px;
+				// overflow: hidden;
 				margin-top: 8px;
 				font: 400 13px / 1.2 @pt-sans;
 			}
@@ -358,7 +381,11 @@ footer.page {
 				display: block;
 				margin-top: 20px;
 				color: rgba(255, 255, 255, 0.7);
-				font: 400 15px / 1 @pt-sans
+				font: 400 15px / 1 @pt-sans;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 
 			h2 {
@@ -380,12 +407,68 @@ footer.page {
 				background-size: 10px 10px;
 			}
 
-			.logo {
-				display: inline-block;
-				width: 160px;
-				height: 30px;
-				margin-top: 0;
-				background: url(../img/logo-footer.svg);
+			&:nth-child(5) {
+				.logo {
+					width: 160px;
+					height: 30px;
+					margin-top: 0;
+					background: url(../img/logo-footer.svg);
+					opacity: .8;
+
+					&:hover {
+						opacity: 1;
+					}
+				}
+
+				.map {
+					position: relative;
+					margin-top: 23px;
+					line-height: 18px;
+
+					&:before {
+						content: "";
+						position: absolute;
+						display: inline-block;
+						width: 8px;
+						height: 11px;
+						left: -15px;
+						top: 2px;
+						background: url(../img/icon-map-marker.svg) no-repeat;
+					}
+				}
+
+				.phone {
+					position: relative;
+					margin-top: 17px;
+
+					&:before {
+						content: "";
+						position: absolute;
+						display: inline-block;
+						width: 11px;
+						height: 11px;
+						left: -18px;
+						top: 2px;
+						background: url(../img/icon-phone-gray.svg) no-repeat;
+					}
+				}
+
+				.mail {
+					position: relative;
+					margin-top: 16px;
+					letter-spacing: -0.05em;
+
+					&:before {
+						content: "";
+						position: absolute;
+						display: inline-block;
+						width: 10px;
+						height: 8px;
+						left: -17px;
+						top: 5px;
+						background: url(../img/icon-mail-gray.svg) no-repeat;
+					}
+				}
 			}
 		}
 	}

@@ -1,5 +1,6 @@
-# Node.js modules
+# my settings
 node_modules/
+_tmp/
 
 # Windows image file caches
 Thumbs.db
